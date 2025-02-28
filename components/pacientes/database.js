@@ -8,3 +8,21 @@ export const getPacientesDB = async () => {
 		console.log(error);
 	}
 }
+
+export const getMedicionesPacienteDB = async () => {
+	try {
+		const [rows] = await db.query('SELECT * FROM paciente_medantropometricas');
+		return rows
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+export const getPruebasPacienteDB = async () => {
+	try {
+		const [rows] = await db.query('SELECT * FROM paciente_pruebas');
+		return rows
+	} catch (error) {
+		console.log(error);
+	}
+}
